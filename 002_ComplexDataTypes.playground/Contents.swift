@@ -33,7 +33,7 @@ otherBeatlesArray[0]
  */
 let colors = Set(["red", "green", "blue"]) // Swift makes no guarantees about its order. Because of it, you can’t read values from a set using numerical positions like you can with arrays.
 let colors2 = Set(["red", "green", "blue", "green", "red"]) // If you try to insert a duplicate item into a set, the duplicates get ignored
-
+colors.contains("red")
 
 /*
  Tuples
