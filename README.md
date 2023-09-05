@@ -1,2 +1,2 @@
 # hundred-days-of-swift
-An way to save my progress learning swift from hackingwithswift.com/100
+A way to save my progress learning swift from [100 days of swift challenge](https://www.hackingwithswift.com/100/)
