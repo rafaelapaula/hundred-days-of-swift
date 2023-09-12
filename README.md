@@ -14,7 +14,7 @@ The first 12 days provide a gentle warm up for your Swift learning. You’ll wat
 - ✅ Day 7 – closures part two
 - ✅ Day 8 – structs, properties, and methods
 - ✅ [Day 9](https://github.com/rafaelapaula/hundred-days-of-swift/commit/6eb32d04ab3e9bc5b5b18274e916f9ecf0b87f13) – access control, static properties, and laziness
-- Day 10 – classes and inheritance
+- ✅ [Day 10](https://github.com/rafaelapaula/hundred-days-of-swift/commit/ab281e81dfb2311fdf9d8a5f23dd8943b35d693b) – classes and inheritance
 - Day 11 – protocols, extensions, and protocol extensions
 - Day 12 – optionals, unwrapping, and typecasting
  
