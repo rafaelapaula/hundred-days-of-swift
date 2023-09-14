@@ -1,25 +1,25 @@
-# hundred-days-of-swift
+# hundred-days-of-swift  ![](https://geps.dev/progress/12)
 A way to save my progress learning swift from [100 days of swift challenge](https://www.hackingwithswift.com/100/)
 
 
-### 📝 Days 1-12: Introduction to Swift
+### ✅ Days 1-12: Introduction to Swift 
 The first 12 days provide a gentle warm up for your Swift learning. You’ll watch about a selection of one-minute videos every day, and complete short quizzes about each of those videos.
 
-- ✅ Day 1 – variables, simple data types, and string interpolation
-- ✅ Day 2 – arrays, dictionaries, sets, and enums
-- ✅ Day 3 – operators and conditions
-- ✅ Day 4 – loops, loops, and more loops
-- ✅ Day 5 – functions, parameters, and errors
-- ✅ Day 6 – closures part one
-- ✅ Day 7 – closures part two
-- ✅ Day 8 – structs, properties, and methods
+- ✅ [Day 1](https://github.com/rafaelapaula/hundred-days-of-swift/commit/c24fc6545b30d7adeeec55fbc3000bcfc14ac70a) – variables, simple data types, and string interpolation
+- ✅ [Day 2](https://github.com/rafaelapaula/hundred-days-of-swift/commit/02dded236828ff206e2897a9c21234157b42569f) – arrays, dictionaries, sets, and enums
+- ✅ [Day 3](https://github.com/rafaelapaula/hundred-days-of-swift/commit/0e710c658294c4f6e193aca2759c476efb6b5fde) – operators and conditions
+- ✅ [Day 4](https://github.com/rafaelapaula/hundred-days-of-swift/commit/8d08c9d10d0688daa4c68274f028067eb268579f) – loops, loops, and more loops
+- ✅ [Day 5](https://github.com/rafaelapaula/hundred-days-of-swift/commit/d47d4d9f2befd7b564bc8b81fb1dea3805efd1f4) – functions, parameters, and errors
+- ✅ [Day 6](https://github.com/rafaelapaula/hundred-days-of-swift/commit/4a2f0dd03f7aa053d25731acc8a9329f063f9845) – closures part one
+- ✅ [Day 7](https://github.com/rafaelapaula/hundred-days-of-swift/commit/565d6d967e77c2e6755e1ec9261b7d52ef297607) – closures part two
+- ✅ [Day 8](https://github.com/rafaelapaula/hundred-days-of-swift/commit/b9dd1fe6aeaee4b0abc9c882095188e0fb420135) – structs, properties, and methods
 - ✅ [Day 9](https://github.com/rafaelapaula/hundred-days-of-swift/commit/6eb32d04ab3e9bc5b5b18274e916f9ecf0b87f13) – access control, static properties, and laziness
 - ✅ [Day 10](https://github.com/rafaelapaula/hundred-days-of-swift/commit/ab281e81dfb2311fdf9d8a5f23dd8943b35d693b) – classes and inheritance
 - ✅ [Day 11](https://github.com/rafaelapaula/hundred-days-of-swift/commit/f2b44d35504d3a978b9dfb1936b45880c4183d4c) – protocols, extensions, and protocol extensions
-- Day 12 – optionals, unwrapping, and typecasting
+- ✅ [Day 12](https://github.com/rafaelapaula/hundred-days-of-swift/commit/ea17732e1c6a91433a2ce5a90b5a4a5dbc0f1a35) – optionals, unwrapping, and typecasting
  
 
-### Days 13-15: Consolidation I
+### 📝 Days 13-15: Consolidation I
 You just learned a lot about Swift in only 12 days, so before we continue it's important you reflect on what you've learned: look for weak spots, re-watch videos, re-take tests, and so on, until you feel comfortable that you have mastered all the Swift language fundamentals covered in days 1-12.
 
 - Day 13 – Swift review, day one
