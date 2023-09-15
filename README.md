@@ -1,4 +1,4 @@
-# hundred-days-of-swift  ![](https://geps.dev/progress/12)
+# hundred-days-of-swift  ![](https://geps.dev/progress/13)
 A way to save my progress learning swift from [100 days of swift challenge](https://www.hackingwithswift.com/100/)
 
 
@@ -22,7 +22,7 @@ The first 12 days provide a gentle warm up for your Swift learning. You’ll wat
 ### 📝 Days 13-15: Consolidation I
 You just learned a lot about Swift in only 12 days, so before we continue it's important you reflect on what you've learned: look for weak spots, re-watch videos, re-take tests, and so on, until you feel comfortable that you have mastered all the Swift language fundamentals covered in days 1-12.
 
-- Day 13 – Swift review, day one
+- ✅ [Day 13](https://github.com/rafaelapaula/hundred-days-of-swift/commit/6039253d59b8c29806c30880da6eba6591558c85) – Swift review, day one
 - Day 14 – Swift review, day two
 - Day 15 – Swift review, day three
  
