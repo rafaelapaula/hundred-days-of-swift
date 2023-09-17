@@ -1,4 +1,4 @@
-# hundred-days-of-swift  ![](https://geps.dev/progress/14)
+# hundred-days-of-swift  ![](https://geps.dev/progress/15)
 A way to save my progress learning swift from [100 days of swift challenge](https://www.hackingwithswift.com/100/)
 
 
@@ -24,7 +24,7 @@ You just learned a lot about Swift in only 12 days, so before we continue it's i
 
 - ✅ [Day 13](https://github.com/rafaelapaula/hundred-days-of-swift/commit/6039253d59b8c29806c30880da6eba6591558c85) – Swift review, day one
 - ✅ [Day 14](https://github.com/rafaelapaula/hundred-days-of-swift/commit/0195b5a7603f7f7c7b07d073b16597f1171043f0) – Swift review, day two
-- Day 15 – Swift review, day three
+- ✅ [Day 15](https://github.com/rafaelapaula/hundred-days-of-swift/commit/99ace92466a2f4aa99fc1f27e9de0bee476a8e8a) – Swift review, day three
  
 
 ### Days 16-22: Starting iOS
