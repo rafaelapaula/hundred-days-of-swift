@@ -19,7 +19,7 @@ The first 12 days provide a gentle warm up for your Swift learning. You’ll wat
 - ✅ [Day 12](https://github.com/rafaelapaula/hundred-days-of-swift/commit/ea17732e1c6a91433a2ce5a90b5a4a5dbc0f1a35) – optionals, unwrapping, and typecasting
  
 
-### 📝 Days 13-15: Consolidation I
+### ✅ Days 13-15: Consolidation I
 You just learned a lot about Swift in only 12 days, so before we continue it's important you reflect on what you've learned: look for weak spots, re-watch videos, re-take tests, and so on, until you feel comfortable that you have mastered all the Swift language fundamentals covered in days 1-12.
 
 - ✅ [Day 13](https://github.com/rafaelapaula/hundred-days-of-swift/commit/6039253d59b8c29806c30880da6eba6591558c85) – Swift review, day one
@@ -27,10 +27,10 @@ You just learned a lot about Swift in only 12 days, so before we continue it's i
 - ✅ [Day 15](https://github.com/rafaelapaula/hundred-days-of-swift/commit/99ace92466a2f4aa99fc1f27e9de0bee476a8e8a) – Swift review, day three
  
 
-### Days 16-22: Starting iOS
+### 📝 Days 16-22: Starting iOS
 Now that you’ve mastered the basics of Swift, in these days you’ll start building real iOS apps using what you learned.
 
-- Day 16 – Project 1, part one
+- ✅ [Day 16](https://github.com/rafaelapaula/hundred-days-of-swift/commit/414d035a0810bf6438ced25d9a7b053bda36d8be) – Project 1, part one
 - Day 17 – Project 1, part two
 - Day 18 – Project 1, part three
 - Day 19 – Project 2, part one
