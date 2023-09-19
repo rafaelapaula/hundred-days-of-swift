@@ -7,7 +7,20 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+protocol ViewCodable {
+  func setup()
+  func addViews()
+  func addConstraints()
+}
+
+extension ViewCodable {
+  func setup() {
+    addViews()
+    addConstraints()
+  }
+}
+
+class MainViewController: UIViewController, ViewCodable {
 
   // MARK: Attributes
 

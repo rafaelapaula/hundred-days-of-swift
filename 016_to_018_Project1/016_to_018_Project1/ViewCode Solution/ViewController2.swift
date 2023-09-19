@@ -13,6 +13,10 @@ class ViewController2: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    title = "Storm Viewer"
+    navigationController?.navigationBar.prefersLargeTitles = true
+    
     self.loadPictures()
   }
   
@@ -36,6 +40,12 @@ extension ViewController2 {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "picture") ??  UITableViewCell(style: .default, reuseIdentifier: "picture")
     cell.textLabel?.text = pictures[indexPath.row]
+    cell.accessoryType = .disclosureIndicator
     return cell
+  }
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let viewController = DetailViewController2(path: pictures[indexPath.row])
+    navigationController?.pushViewController(viewController, animated: true)
   }
 }
