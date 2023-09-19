@@ -1,4 +1,4 @@
-# hundred-days-of-swift  ![](https://geps.dev/progress/16)
+# hundred-days-of-swift  ![](https://geps.dev/progress/17)
 A way to save my progress learning swift from [100 days of swift challenge](https://www.hackingwithswift.com/100/)
 
 
@@ -31,7 +31,7 @@ You just learned a lot about Swift in only 12 days, so before we continue it's i
 Now that you’ve mastered the basics of Swift, in these days you’ll start building real iOS apps using what you learned.
 
 - ✅ [Day 16](https://github.com/rafaelapaula/hundred-days-of-swift/commit/414d035a0810bf6438ced25d9a7b053bda36d8be) – Project 1, part one
-- Day 17 – Project 1, part two
+- ✅ [Day 17](https://github.com/rafaelapaula/hundred-days-of-swift/commit/e8640940eac3b5442a4dde26e34a93205f090e0c) – Project 1, part two
 - Day 18 – Project 1, part three
 - Day 19 – Project 2, part one
 - Day 20 – Project 2, part two
