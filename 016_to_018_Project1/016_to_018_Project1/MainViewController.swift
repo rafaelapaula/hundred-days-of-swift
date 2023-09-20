@@ -89,14 +89,11 @@ class MainViewController: UIViewController, ViewCodable {
   @objc func didSelectStoryboardSolution(sender: UIButton) {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController")
-    let navigationController = UINavigationController(rootViewController: viewController)
-    navigationController.modalPresentationStyle = .overFullScreen
-    self.present(navigationController, animated: true)
+    self.navigationController?.pushViewController(viewController, animated: true)
   }
   
   @objc func didSelectViewCodeSolution(sender: UIButton) {
-    let navigationController = UINavigationController(rootViewController: ViewController2())
-    navigationController.modalPresentationStyle = .overFullScreen
-    self.present(navigationController, animated: true)
+    let viewController = ViewController2()
+    self.navigationController?.pushViewController(viewController, animated: true)
   }
 }

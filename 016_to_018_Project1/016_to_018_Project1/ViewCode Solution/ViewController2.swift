@@ -28,7 +28,7 @@ class ViewController2: UITableViewController {
       let items = try? fileManager.contentsOfDirectory(atPath: path)
     else { return }
     
-    pictures = items.filter { $0.hasPrefix("nssl") }
+    pictures = items.filter { $0.hasPrefix("nssl") }.sorted()
   }
 }
 
@@ -39,13 +39,14 @@ extension ViewController2 {
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "picture") ??  UITableViewCell(style: .default, reuseIdentifier: "picture")
+    cell.textLabel?.font = .systemFont(ofSize: 30.0)
     cell.textLabel?.text = pictures[indexPath.row]
     cell.accessoryType = .disclosureIndicator
     return cell
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let viewController = DetailViewController2(path: pictures[indexPath.row])
+    let viewController = DetailViewController2(imageInfo: (path: pictures[indexPath.row], position: (indexPath.row + 1), total: pictures.count))
     navigationController?.pushViewController(viewController, animated: true)
   }
 }

@@ -30,8 +30,7 @@ class ViewController: UITableViewController {
       guard item.hasPrefix("nssl") else { continue }
       pictures.append(item)
     }
-    
-    print(pictures)
+    pictures.sort()
   }
 }
 
@@ -50,7 +49,7 @@ extension ViewController {
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
-      vc.selectedImage = pictures[indexPath.row]
+      vc.imageInfo = (path: pictures[indexPath.row], position: (indexPath.row + 1), total: pictures.count)
       navigationController?.pushViewController(vc, animated: true)
     }
   }

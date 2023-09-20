@@ -8,19 +8,19 @@
 import UIKit
 
 class DetailViewController2: UIViewController {
-  var path: String?
+  var imageInfo: (path: String, position: Int, total: Int)?
   
   lazy var imageView = {
     var imageView = UIImageView()
-    imageView.image = UIImage(named: path ?? "")
+    imageView.image = UIImage(named: imageInfo?.path ?? "")
     imageView.contentMode = .scaleAspectFill
     imageView.clipsToBounds = true // Different Xcode versions create image views slightly differently. If you want to use Aspect Fill for your image, make sure Clip To Bounds is checked to avoid the image overspilling.
     imageView.translatesAutoresizingMaskIntoConstraints = false
     return imageView
   }()
   
-  init(path: String) {
-    self.path = path
+  init(imageInfo: (path: String, position: Int, total: Int)) {
+    self.imageInfo = imageInfo
     super.init(nibName: nil, bundle: nil)
   }
   
@@ -30,11 +30,11 @@ class DetailViewController2: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    title = path
     navigationItem.largeTitleDisplayMode = .never
-    
     setup()
+    
+    guard let imageInfo = imageInfo else { return }
+    title = "Picture \(imageInfo.position) of \(imageInfo.total)"
   }
 }
 
