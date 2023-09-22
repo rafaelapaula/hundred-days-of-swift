@@ -12,6 +12,7 @@ class ViewController2: UIViewController, ViewCodable {
   var countries = [String]()
   var score = 0
   var correctAnswer = 0
+  var counter = 0
   
   lazy var button1: UIButton = {
     var button = UIButton(type: .custom)
@@ -78,6 +79,12 @@ class ViewController2: UIViewController, ViewCodable {
     askQuestion()
   }
   
+  func restart(action: UIAlertAction? = nil) {
+    score = 0
+    counter = 0
+    title = countries[correctAnswer].uppercased() + " | Score: \(score)"
+  }
+  
   func askQuestion(action: UIAlertAction? = nil) {
     countries.shuffle()
     correctAnswer = Int.random(in: 0...2)
@@ -86,22 +93,44 @@ class ViewController2: UIViewController, ViewCodable {
     button2.setImage(UIImage(named: countries[1]), for: .normal)
     button3.setImage(UIImage(named: countries[2]), for: .normal)
     
-    title = countries[correctAnswer].uppercased()
+    title = countries[correctAnswer].uppercased() + " | Score: \(score)"
   }
   
   @objc func buttonTapped(_ sender: UIButton) {
     var title: String
+    var message: String
+    var image: UIImage?
     
     if sender.tag == correctAnswer {
       title = "Correct"
       score += 1
+      message = "Your score is \(score)"
     } else {
       title = "Wrong"
       score -= 1
+      message = "Your score is \(score)\nThat's the flag of \(countries[correctAnswer].uppercased())"
+      image = UIImage(named: countries[correctAnswer])
     }
     
-    let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
-    ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+    if counter >= 10 {
+      endOfGame()
+      return
+    } else {
+      counter += 1
+    }
+    
+    let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    let action = UIAlertAction(title: "Continue", style: .default, handler: askQuestion)
+    action.setValue(image?.withRenderingMode(.alwaysOriginal), forKey: "image")
+    ac.addAction(action)
+    present(ac, animated: true)
+    
+    self.title = countries[correctAnswer].uppercased() + " | Score: \(score)"
+  }
+  
+  func endOfGame() {
+    let ac = UIAlertController(title: "End of game!", message: "Your score is \(score)", preferredStyle: .alert)
+    ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: restart))
     present(ac, animated: true)
   }
 }
