@@ -15,6 +15,7 @@ class ViewController: UIViewController {
   
   var countries = [String]()
   var score = 0
+  var correctAnswer = 0
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -53,6 +54,8 @@ class ViewController: UIViewController {
      Don't despair, though: CALayer has its own way of setting colors called CGColor, which comes from Apple's Core Graphics framework. This, like CALayer, is at a lower level than UIButton, so the two can talk happily – again, as long as you're happy with the extra complexity.
      
      Even better, UIColor (which sits above CGColor) is able to convert to and from CGColor easily, which means you don't need to worry about the complexity – hurray!
+     
+     button1.layer.borderColor = UIColor.lightGray.cgColor
      */
     
     button1.layer.borderColor = UIColor.lightGray.cgColor
@@ -63,10 +66,31 @@ class ViewController: UIViewController {
 
   }
 
-  func askQuestion() {
+  func askQuestion(action: UIAlertAction? = nil) {
+    countries.shuffle()
+    correctAnswer = Int.random(in: 0...2)
+    
     button1.setImage(UIImage(named: countries[0]), for: .normal)
     button2.setImage(UIImage(named: countries[1]), for: .normal)
     button3.setImage(UIImage(named: countries[2]), for: .normal)
+    
+    title = countries[correctAnswer].uppercased()
+  }
+  
+  @IBAction func buttonTapped(_ sender: UIButton) {
+    var title: String
+    
+    if sender.tag == correctAnswer {
+      title = "Correct"
+      score += 1
+    } else {
+      title = "Wrong"
+      score -= 1
+    }
+    
+    let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
+    ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+    present(ac, animated: true)
   }
 
 }

@@ -93,7 +93,7 @@ class MainViewController: UIViewController, ViewCodable {
   }
   
   @objc func didSelectViewCodeSolution(sender: UIButton) {
-//    let viewController = ViewController2()
-//    self.navigationController?.pushViewController(viewController, animated: true)
+    let viewController = ViewController2()
+    self.navigationController?.pushViewController(viewController, animated: true)
   }
 }
