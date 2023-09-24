@@ -15,7 +15,6 @@ class ViewController: UITableViewController {
     super.viewDidLoad()
     title = "Storm Viewer"
     navigationController?.navigationBar.prefersLargeTitles = true
-    navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
     loadImages()
   }
 
@@ -32,12 +31,6 @@ class ViewController: UITableViewController {
       pictures.append(item)
     }
     pictures.sort()
-  }
-  
-  @objc func shareTapped() {
-    let vc = UIActivityViewController(activityItems: ["This is my first app of 100 days of swift!"], applicationActivities: [])
-    vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
-    present(vc, animated: true)
   }
 }
 
