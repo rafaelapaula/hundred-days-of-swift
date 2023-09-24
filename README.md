@@ -1,4 +1,4 @@
-# hundred-days-of-swift  ![](https://geps.dev/progress/21)
+# hundred-days-of-swift  ![](https://geps.dev/progress/22)
 A way to save my progress learning swift from [100 days of swift challenge](https://www.hackingwithswift.com/100/)
 
 
@@ -36,7 +36,7 @@ Now that you’ve mastered the basics of Swift, in these days you’ll start bui
 - ✅ [Day 19](https://github.com/rafaelapaula/hundred-days-of-swift/commit/0113062f6e614a63fcb691bb157bbce217138f2c) – Project 2, part one
 - ✅ [Day 20](https://github.com/rafaelapaula/hundred-days-of-swift/commit/ae0518cd26e4f81cc1ebaf0e0ace2c52ac912199) – Project 2, part two
 - ✅ [Day 21](https://github.com/rafaelapaula/hundred-days-of-swift/commit/9df08e7667c981b498b2358d610fc419d87566fc) – Project 2, part three
-- Day 22 – Project 3
+- ✅ [Day 22](https://github.com/rafaelapaula/hundred-days-of-swift/commit/fe81ee06f46c56d27c7fad2d78542d0db4a96ff1) – Project 3
  
 
 ### Day 23: Consolidation II
