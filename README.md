@@ -27,7 +27,7 @@ You just learned a lot about Swift in only 12 days, so before we continue it's i
 - ✅ [Day 15](https://github.com/rafaelapaula/hundred-days-of-swift/commit/99ace92466a2f4aa99fc1f27e9de0bee476a8e8a) – Swift review, day three
  
 
-### 📝 Days 16-22: Starting iOS
+### ✅ Days 16-22: Starting iOS
 Now that you’ve mastered the basics of Swift, in these days you’ll start building real iOS apps using what you learned.
 
 - ✅ [Day 16](https://github.com/rafaelapaula/hundred-days-of-swift/commit/414d035a0810bf6438ced25d9a7b053bda36d8be) – Project 1, part one
@@ -39,7 +39,7 @@ Now that you’ve mastered the basics of Swift, in these days you’ll start bui
 - ✅ [Day 22](https://github.com/rafaelapaula/hundred-days-of-swift/commit/fe81ee06f46c56d27c7fad2d78542d0db4a96ff1) – Project 3
  
 
-### Day 23: Consolidation II
+### 📝 Day 23: Consolidation II
 In the last few days we covered some of the fundamentals of iOS development, and before we move on to the next set of projects it’s important to take a step back and review what you’ve learned.
 
 - Day 23 – Milestone: Projects 1-3
