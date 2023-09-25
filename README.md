@@ -1,4 +1,4 @@
-# hundred-days-of-swift  ![](https://geps.dev/progress/22)
+# hundred-days-of-swift  ![](https://geps.dev/progress/23)
 A way to save my progress learning swift from [100 days of swift challenge](https://www.hackingwithswift.com/100/)
 
 
@@ -39,13 +39,13 @@ Now that you’ve mastered the basics of Swift, in these days you’ll start bui
 - ✅ [Day 22](https://github.com/rafaelapaula/hundred-days-of-swift/commit/fe81ee06f46c56d27c7fad2d78542d0db4a96ff1) – Project 3
  
 
-### 📝 Day 23: Consolidation II
+### ✅ Day 23: Consolidation II
 In the last few days we covered some of the fundamentals of iOS development, and before we move on to the next set of projects it’s important to take a step back and review what you’ve learned.
 
-- Day 23 – Milestone: Projects 1-3
+- ✅ [Day 23](https://github.com/rafaelapaula/hundred-days-of-swift/commit/40f46549cd3eb8e223a93dadd3cd80ee97a7017f) – Milestone: Projects 1-3
  
 
-### Days 24-31: Web views, user input, and Auto Layout
+### 📝 Days 24-31: Web views, user input, and Auto Layout
 The next three projects we’re looking at will push your iOS skills further as you create some user interface in code, manage table views more carefully, and get some experience with closures.
 
 - Day 24 – Project 4, part one
