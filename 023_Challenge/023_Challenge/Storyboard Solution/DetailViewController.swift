@@ -18,7 +18,7 @@ class DetailViewController: UIViewController {
     
     guard
       let path = flagInfo?.path,
-      let image = UIImage(named: path)
+      let image = UIImage(named: "Flag\(path)")
     else { return }
     
     imageView.image = image

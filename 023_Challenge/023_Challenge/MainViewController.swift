@@ -14,9 +14,9 @@ extension ViewCodable {
 }
 
 class MainViewController: UIViewController, ViewCodable {
-
+  
   // MARK: Attributes
-
+  
   lazy var storyboardButton = {
     let button = UIButton()
     button.setTitle("Storyboard solution", for: .normal)
@@ -26,7 +26,7 @@ class MainViewController: UIViewController, ViewCodable {
     button.translatesAutoresizingMaskIntoConstraints = false
     return button
   }()
-
+  
   lazy var viewCodeButton = {
     let button = UIButton()
     button.setTitle("ViewCode solution", for: .normal)
@@ -36,7 +36,7 @@ class MainViewController: UIViewController, ViewCodable {
     button.translatesAutoresizingMaskIntoConstraints = false
     return button
   }()
-
+  
   lazy var optionsStackView = {
     let stackView = UIStackView()
     stackView.distribution = .fillEqually
@@ -46,21 +46,21 @@ class MainViewController: UIViewController, ViewCodable {
     stackView.translatesAutoresizingMaskIntoConstraints = false
     return stackView
   }()
-
+  
   // MARK: Setup
-
+  
   func setup() {
     view.backgroundColor = .white
     addViews()
     addConstraints()
   }
-
+  
   func addViews() {
     optionsStackView.addArrangedSubview(storyboardButton)
     optionsStackView.addArrangedSubview(viewCodeButton)
     view.addSubview(optionsStackView)
   }
-
+  
   func addConstraints() {
     NSLayoutConstraint.activate([
       optionsStackView.topAnchor.constraint(lessThanOrEqualTo: view.topAnchor, constant: 40),
@@ -69,9 +69,9 @@ class MainViewController: UIViewController, ViewCodable {
       optionsStackView.bottomAnchor.constraint(greaterThanOrEqualTo: view.bottomAnchor, constant: -40.0)
     ])
   }
-
+  
   // MARK: Life cycle
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setup()
@@ -86,7 +86,8 @@ class MainViewController: UIViewController, ViewCodable {
   }
   
   @objc func didSelectViewCodeSolution(sender: UIButton) {
-    let viewController = ViewController2()
+    let viewController = FlagsListViewController()
     self.navigationController?.pushViewController(viewController, animated: true)
   }
 }
+

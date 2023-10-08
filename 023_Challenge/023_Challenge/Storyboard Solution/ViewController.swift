@@ -16,7 +16,7 @@ class ViewController: UITableViewController {
     title = "Flags"
     navigationController?.navigationBar.prefersLargeTitles = true
     
-    flags += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
+    flags += ["Estonia", "France", "Germany", "Ireland", "Italy", "Monaco", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"]
   }
 
 
@@ -27,14 +27,14 @@ class ViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
     cell.textLabel?.text = flags[indexPath.row].uppercased()
-    cell.imageView?.image = UIImage(named: flags[indexPath.row])
+    cell.imageView?.image = UIImage(named: "Flag\(flags[indexPath.row])")
     
     return cell
             
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    guard let vc = storyboard?.instantiateViewController(withIdentifier: "detail") as? DetailViewController else { return }
+    guard let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
     vc.flagInfo = (path: flags[indexPath.row], name: flags[indexPath.row].uppercased())
     navigationController?.pushViewController(vc, animated: true)
   }

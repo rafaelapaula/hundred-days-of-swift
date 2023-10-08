@@ -14,6 +14,22 @@
 		1387F0012AC18F6B002C1050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1387F0002AC18F6B002C1050 /* Assets.xcassets */; };
 		1387F0042AC18F6B002C1050 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1387F0022AC18F6B002C1050 /* LaunchScreen.storyboard */; };
 		1387F00C2AC190C4002C1050 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1387F00B2AC190C4002C1050 /* DetailViewController.swift */; };
+		138ACB7C2AD2DC8400640EF7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138ACB7B2AD2DC8400640EF7 /* MainViewController.swift */; };
+		138ACB7F2AD2DCC700640EF7 /* FlagsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138ACB7E2AD2DCC700640EF7 /* FlagsListViewController.swift */; };
+		138ACB842AD2DD8D00640EF7 /* FlagsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138ACB832AD2DD8D00640EF7 /* FlagsListViewModel.swift */; };
+		138ACB862AD2DDC400640EF7 /* FlagsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138ACB852AD2DDC400640EF7 /* FlagsViewCell.swift */; };
+		138ACB8B2AD2F1FD00640EF7 /* FlagEstonia.png in Resources */ = {isa = PBXBuildFile; fileRef = 138ACB8A2AD2F1FD00640EF7 /* FlagEstonia.png */; };
+		138ACB912AD2F99100640EF7 /* FlagFrance.png in Resources */ = {isa = PBXBuildFile; fileRef = 138ACB8C2AD2F99100640EF7 /* FlagFrance.png */; };
+		138ACB922AD2F99100640EF7 /* FlagGermany.png in Resources */ = {isa = PBXBuildFile; fileRef = 138ACB8D2AD2F99100640EF7 /* FlagGermany.png */; };
+		138ACB932AD2F99100640EF7 /* FlagMonaco.png in Resources */ = {isa = PBXBuildFile; fileRef = 138ACB8E2AD2F99100640EF7 /* FlagMonaco.png */; };
+		138ACB942AD2F99100640EF7 /* FlagIreland.png in Resources */ = {isa = PBXBuildFile; fileRef = 138ACB8F2AD2F99100640EF7 /* FlagIreland.png */; };
+		138ACB952AD2F99100640EF7 /* FlagItaly.png in Resources */ = {isa = PBXBuildFile; fileRef = 138ACB902AD2F99100640EF7 /* FlagItaly.png */; };
+		138ACB9C2AD2FA8800640EF7 /* FlagPoland.png in Resources */ = {isa = PBXBuildFile; fileRef = 138ACB962AD2FA8800640EF7 /* FlagPoland.png */; };
+		138ACB9D2AD2FA8800640EF7 /* FlagRussia.png in Resources */ = {isa = PBXBuildFile; fileRef = 138ACB972AD2FA8800640EF7 /* FlagRussia.png */; };
+		138ACB9E2AD2FA8800640EF7 /* FlagUS.png in Resources */ = {isa = PBXBuildFile; fileRef = 138ACB982AD2FA8800640EF7 /* FlagUS.png */; };
+		138ACB9F2AD2FA8800640EF7 /* FlagSpain.png in Resources */ = {isa = PBXBuildFile; fileRef = 138ACB992AD2FA8800640EF7 /* FlagSpain.png */; };
+		138ACBA02AD2FA8800640EF7 /* FlagUK.png in Resources */ = {isa = PBXBuildFile; fileRef = 138ACB9A2AD2FA8800640EF7 /* FlagUK.png */; };
+		138ACBA12AD2FA8800640EF7 /* FlagNigeria.png in Resources */ = {isa = PBXBuildFile; fileRef = 138ACB9B2AD2FA8800640EF7 /* FlagNigeria.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +42,22 @@
 		1387F0032AC18F6B002C1050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1387F0052AC18F6B002C1050 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1387F00B2AC190C4002C1050 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		138ACB7B2AD2DC8400640EF7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		138ACB7E2AD2DCC700640EF7 /* FlagsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsListViewController.swift; sourceTree = "<group>"; };
+		138ACB832AD2DD8D00640EF7 /* FlagsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsListViewModel.swift; sourceTree = "<group>"; };
+		138ACB852AD2DDC400640EF7 /* FlagsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsViewCell.swift; sourceTree = "<group>"; };
+		138ACB8A2AD2F1FD00640EF7 /* FlagEstonia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlagEstonia.png; sourceTree = "<group>"; };
+		138ACB8C2AD2F99100640EF7 /* FlagFrance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlagFrance.png; sourceTree = "<group>"; };
+		138ACB8D2AD2F99100640EF7 /* FlagGermany.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlagGermany.png; sourceTree = "<group>"; };
+		138ACB8E2AD2F99100640EF7 /* FlagMonaco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlagMonaco.png; sourceTree = "<group>"; };
+		138ACB8F2AD2F99100640EF7 /* FlagIreland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlagIreland.png; sourceTree = "<group>"; };
+		138ACB902AD2F99100640EF7 /* FlagItaly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlagItaly.png; sourceTree = "<group>"; };
+		138ACB962AD2FA8800640EF7 /* FlagPoland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlagPoland.png; sourceTree = "<group>"; };
+		138ACB972AD2FA8800640EF7 /* FlagRussia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlagRussia.png; sourceTree = "<group>"; };
+		138ACB982AD2FA8800640EF7 /* FlagUS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlagUS.png; sourceTree = "<group>"; };
+		138ACB992AD2FA8800640EF7 /* FlagSpain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlagSpain.png; sourceTree = "<group>"; };
+		138ACB9A2AD2FA8800640EF7 /* FlagUK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlagUK.png; sourceTree = "<group>"; };
+		138ACB9B2AD2FA8800640EF7 /* FlagNigeria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlagNigeria.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +92,62 @@
 			children = (
 				1387EFF72AC18F69002C1050 /* AppDelegate.swift */,
 				1387EFF92AC18F69002C1050 /* SceneDelegate.swift */,
-				1387EFFB2AC18F69002C1050 /* ViewController.swift */,
-				1387F00B2AC190C4002C1050 /* DetailViewController.swift */,
-				1387EFFD2AC18F69002C1050 /* Main.storyboard */,
+				138ACB7B2AD2DC8400640EF7 /* MainViewController.swift */,
+				138ACB7D2AD2DCAB00640EF7 /* ViewCode Solution */,
+				138ACB7A2AD2DC0000640EF7 /* Storyboard Solution */,
 				1387F0002AC18F6B002C1050 /* Assets.xcassets */,
+				138ACB872AD2F0E900640EF7 /* Flags */,
 				1387F0022AC18F6B002C1050 /* LaunchScreen.storyboard */,
 				1387F0052AC18F6B002C1050 /* Info.plist */,
 			);
 			path = 023_Challenge;
+			sourceTree = "<group>";
+		};
+		138ACB7A2AD2DC0000640EF7 /* Storyboard Solution */ = {
+			isa = PBXGroup;
+			children = (
+				1387EFFD2AC18F69002C1050 /* Main.storyboard */,
+				1387EFFB2AC18F69002C1050 /* ViewController.swift */,
+				1387F00B2AC190C4002C1050 /* DetailViewController.swift */,
+			);
+			path = "Storyboard Solution";
+			sourceTree = "<group>";
+		};
+		138ACB7D2AD2DCAB00640EF7 /* ViewCode Solution */ = {
+			isa = PBXGroup;
+			children = (
+				138ACB822AD2DD3800640EF7 /* Flags List */,
+			);
+			path = "ViewCode Solution";
+			sourceTree = "<group>";
+		};
+		138ACB822AD2DD3800640EF7 /* Flags List */ = {
+			isa = PBXGroup;
+			children = (
+				138ACB7E2AD2DCC700640EF7 /* FlagsListViewController.swift */,
+				138ACB852AD2DDC400640EF7 /* FlagsViewCell.swift */,
+				138ACB832AD2DD8D00640EF7 /* FlagsListViewModel.swift */,
+			);
+			path = "Flags List";
+			sourceTree = "<group>";
+		};
+		138ACB872AD2F0E900640EF7 /* Flags */ = {
+			isa = PBXGroup;
+			children = (
+				138ACB8A2AD2F1FD00640EF7 /* FlagEstonia.png */,
+				138ACB8C2AD2F99100640EF7 /* FlagFrance.png */,
+				138ACB8D2AD2F99100640EF7 /* FlagGermany.png */,
+				138ACB8F2AD2F99100640EF7 /* FlagIreland.png */,
+				138ACB902AD2F99100640EF7 /* FlagItaly.png */,
+				138ACB8E2AD2F99100640EF7 /* FlagMonaco.png */,
+				138ACB9B2AD2FA8800640EF7 /* FlagNigeria.png */,
+				138ACB962AD2FA8800640EF7 /* FlagPoland.png */,
+				138ACB972AD2FA8800640EF7 /* FlagRussia.png */,
+				138ACB992AD2FA8800640EF7 /* FlagSpain.png */,
+				138ACB9A2AD2FA8800640EF7 /* FlagUK.png */,
+				138ACB982AD2FA8800640EF7 /* FlagUS.png */,
+			);
+			path = Flags;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +208,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				138ACB912AD2F99100640EF7 /* FlagFrance.png in Resources */,
+				138ACB9D2AD2FA8800640EF7 /* FlagRussia.png in Resources */,
+				138ACB9C2AD2FA8800640EF7 /* FlagPoland.png in Resources */,
+				138ACBA12AD2FA8800640EF7 /* FlagNigeria.png in Resources */,
 				1387F0042AC18F6B002C1050 /* LaunchScreen.storyboard in Resources */,
 				1387F0012AC18F6B002C1050 /* Assets.xcassets in Resources */,
+				138ACB942AD2F99100640EF7 /* FlagIreland.png in Resources */,
+				138ACB932AD2F99100640EF7 /* FlagMonaco.png in Resources */,
+				138ACB9F2AD2FA8800640EF7 /* FlagSpain.png in Resources */,
+				138ACB9E2AD2FA8800640EF7 /* FlagUS.png in Resources */,
 				1387EFFF2AC18F69002C1050 /* Main.storyboard in Resources */,
+				138ACB952AD2F99100640EF7 /* FlagItaly.png in Resources */,
+				138ACB8B2AD2F1FD00640EF7 /* FlagEstonia.png in Resources */,
+				138ACB922AD2F99100640EF7 /* FlagGermany.png in Resources */,
+				138ACBA02AD2FA8800640EF7 /* FlagUK.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,10 +233,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				138ACB862AD2DDC400640EF7 /* FlagsViewCell.swift in Sources */,
+				138ACB842AD2DD8D00640EF7 /* FlagsListViewModel.swift in Sources */,
 				1387EFFC2AC18F69002C1050 /* ViewController.swift in Sources */,
 				1387EFF82AC18F69002C1050 /* AppDelegate.swift in Sources */,
 				1387EFFA2AC18F69002C1050 /* SceneDelegate.swift in Sources */,
 				1387F00C2AC190C4002C1050 /* DetailViewController.swift in Sources */,
+				138ACB7C2AD2DC8400640EF7 /* MainViewController.swift in Sources */,
+				138ACB7F2AD2DCC700640EF7 /* FlagsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
