@@ -1,4 +1,4 @@
-# hundred-days-of-swift  ![](https://geps.dev/progress/24)
+# hundred-days-of-swift  ![](https://geps.dev/progress/25)
 A way to save my progress learning swift from [100 days of swift challenge](https://www.hackingwithswift.com/100/)
 
 
@@ -49,7 +49,7 @@ In the last few days we covered some of the fundamentals of iOS development, and
 The next three projects we’re looking at will push your iOS skills further as you create some user interface in code, manage table views more carefully, and get some experience with closures.
 
 - ✅ [Day 24](https://github.com/rafaelapaula/hundred-days-of-swift/commit/e8443cd25918f8c1881391ebe68a4c532324b504) – Project 4, part one
-- Day 25 – Project 4, part two
+- ✅ [Day 25](https://github.com/rafaelapaula/hundred-days-of-swift/commit/6babbf25be62a75da54a426ce559b8a726d08787) – Project 4, part two
 - Day 26 – Project 4, part three
 - Day 27 – Project 5, part one
 - Day 28 – Project 5, part two
