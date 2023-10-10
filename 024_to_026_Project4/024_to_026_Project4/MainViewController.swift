@@ -17,16 +17,6 @@ class MainViewController: UIViewController, ViewCodable {
   
   // MARK: Attributes
   
-  lazy var storyboardButton = {
-    let button = UIButton()
-    button.setTitle("Storyboard solution", for: .normal)
-    button.backgroundColor = .gray.withAlphaComponent(0.7)
-    button.layer.cornerRadius = 8
-    button.addTarget(self, action: #selector(didSelectStoryboardSolution), for: .touchUpInside)
-    button.translatesAutoresizingMaskIntoConstraints = false
-    return button
-  }()
-  
   lazy var viewCodeButton = {
     let button = UIButton()
     button.setTitle("ViewCode solution", for: .normal)
@@ -56,7 +46,6 @@ class MainViewController: UIViewController, ViewCodable {
   }
   
   func addViews() {
-    optionsStackView.addArrangedSubview(storyboardButton)
     optionsStackView.addArrangedSubview(viewCodeButton)
     view.addSubview(optionsStackView)
   }
@@ -79,15 +68,9 @@ class MainViewController: UIViewController, ViewCodable {
   
   // MARK: Actions
   
-  @objc func didSelectStoryboardSolution(sender: UIButton) {
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController")
-    self.navigationController?.pushViewController(viewController, animated: true)
-  }
-  
   @objc func didSelectViewCodeSolution(sender: UIButton) {
-//    let viewController = FlagsListViewController()
-//    self.navigationController?.pushViewController(viewController, animated: true)
+    let viewController = SitesListViewController()
+    self.navigationController?.pushViewController(viewController, animated: true)
   }
 }
 
