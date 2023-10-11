@@ -1,4 +1,4 @@
-# hundred-days-of-swift  ![](https://geps.dev/progress/26)
+# hundred-days-of-swift  ![](https://geps.dev/progress/27)
 A way to save my progress learning swift from [100 days of swift challenge](https://www.hackingwithswift.com/100/)
 
 
@@ -51,7 +51,7 @@ The next three projects we’re looking at will push your iOS skills further as 
 - ✅ [Day 24](https://github.com/rafaelapaula/hundred-days-of-swift/commit/e8443cd25918f8c1881391ebe68a4c532324b504) – Project 4, part one
 - ✅ [Day 25](https://github.com/rafaelapaula/hundred-days-of-swift/commit/6babbf25be62a75da54a426ce559b8a726d08787) – Project 4, part two
 - ✅ [Day 26](https://github.com/rafaelapaula/hundred-days-of-swift/commit/def899cfe1d6282629dbb1f1d123f88ae3a09dd1) – Project 4, part three
-- Day 27 – Project 5, part one
+- ✅ [Day 27](https://github.com/rafaelapaula/hundred-days-of-swift/commit/1730e986c2441a6bc1861936eee16383c458392c) – Project 5, part one
 - Day 28 – Project 5, part two
 - Day 29 – Project 5, part three
 - Day 30 – Project 6, part one
