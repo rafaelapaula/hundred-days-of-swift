@@ -13,6 +13,8 @@
 		1335D2F52AD6ADD6003836D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1335D2F42AD6ADD6003836D2 /* Assets.xcassets */; };
 		1335D2F82AD6ADD6003836D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1335D2F62AD6ADD6003836D2 /* LaunchScreen.storyboard */; };
 		1335D3002AD6AFCF003836D2 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1335D2FF2AD6AFCF003836D2 /* start.txt */; };
+		13364FA52ADA00FE00BBC096 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13364FA42ADA00FE00BBC096 /* ViewModel.swift */; };
+		13364FA72ADA0EF800BBC096 /* AnagramErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13364FA62ADA0EF800BBC096 /* AnagramErrors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1335D2F72AD6ADD6003836D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1335D2F92AD6ADD6003836D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1335D2FF2AD6AFCF003836D2 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
+		13364FA42ADA00FE00BBC096 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		13364FA62ADA0EF800BBC096 /* AnagramErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramErrors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				1335D2EB2AD6ADD4003836D2 /* AppDelegate.swift */,
 				1335D2ED2AD6ADD4003836D2 /* SceneDelegate.swift */,
 				1335D2EF2AD6ADD4003836D2 /* ViewController.swift */,
+				13364FA42ADA00FE00BBC096 /* ViewModel.swift */,
+				13364FA62ADA0EF800BBC096 /* AnagramErrors.swift */,
 				1335D2F42AD6ADD6003836D2 /* Assets.xcassets */,
 				1335D2F62AD6ADD6003836D2 /* LaunchScreen.storyboard */,
 				1335D2F92AD6ADD6003836D2 /* Info.plist */,
@@ -138,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13364FA72ADA0EF800BBC096 /* AnagramErrors.swift in Sources */,
 				1335D2F02AD6ADD4003836D2 /* ViewController.swift in Sources */,
 				1335D2EC2AD6ADD4003836D2 /* AppDelegate.swift in Sources */,
+				13364FA52ADA00FE00BBC096 /* ViewModel.swift in Sources */,
 				1335D2EE2AD6ADD4003836D2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
