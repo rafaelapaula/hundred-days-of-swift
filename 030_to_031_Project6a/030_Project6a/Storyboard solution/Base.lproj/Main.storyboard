@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="_30_to_031_Project6a" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0L9-Pr-Skg">
+                                <rect key="frame" x="84.666666666666686" y="100" width="224" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0L9-Pr-Skg" secondAttribute="height" multiplier="112:57" id="ezz-mX-BTB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wRv-NU-VbQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBT-6A-rWT">
+                                <rect key="frame" x="84.666666666666686" y="244" width="224" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QBT-6A-rWT" secondAttribute="height" multiplier="112:57" id="8Ib-nk-gJG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y9k-6g-bjI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBy-pZ-vex">
+                                <rect key="frame" x="84.666666666666686" y="388" width="224" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BBy-pZ-vex" secondAttribute="height" multiplier="112:57" id="Woz-jm-zwY"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="0.0" height="2"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VGf-K9-5Lz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BBy-pZ-vex" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2uu-39-X4B"/>
+                            <constraint firstItem="BBy-pZ-vex" firstAttribute="top" secondItem="QBT-6A-rWT" secondAttribute="bottom" constant="30" id="3XD-eU-eGO"/>
+                            <constraint firstItem="QBT-6A-rWT" firstAttribute="height" secondItem="0L9-Pr-Skg" secondAttribute="height" id="6Jn-nb-cIJ"/>
+                            <constraint firstItem="BBy-pZ-vex" firstAttribute="height" secondItem="QBT-6A-rWT" secondAttribute="height" id="8ub-21-L2q"/>
+                            <constraint firstItem="QBT-6A-rWT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="A0J-Ut-QoV"/>
+                            <constraint firstItem="QBT-6A-rWT" firstAttribute="top" secondItem="0L9-Pr-Skg" secondAttribute="bottom" constant="30" id="JYT-wa-j3n"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="BBy-pZ-vex" secondAttribute="bottom" constant="20" id="cl8-oc-q6l"/>
+                            <constraint firstItem="0L9-Pr-Skg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="dmR-r1-U96"/>
+                            <constraint firstItem="0L9-Pr-Skg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wdq-yY-2ZF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="0L9-Pr-Skg" id="vsz-Fs-a3h"/>
+                        <outlet property="button2" destination="QBT-6A-rWT" id="8tP-3e-BSz"/>
+                        <outlet property="button3" destination="BBy-pZ-vex" id="t9a-Cu-j2j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="us" width="200" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
