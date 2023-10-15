@@ -1,4 +1,4 @@
-# hundred-days-of-swift  ![](https://geps.dev/progress/30)
+# hundred-days-of-swift  ![](https://geps.dev/progress/31)
 A way to save my progress learning swift from [100 days of swift challenge](https://www.hackingwithswift.com/100/)
 
 
@@ -45,7 +45,7 @@ In the last few days we covered some of the fundamentals of iOS development, and
 - ✅ [Day 23](https://github.com/rafaelapaula/hundred-days-of-swift/commit/40f46549cd3eb8e223a93dadd3cd80ee97a7017f) – Milestone: Projects 1-3
  
 
-### 📝 Days 24-31: Web views, user input, and Auto Layout
+### ✅ Days 24-31: Web views, user input, and Auto Layout
 The next three projects we’re looking at will push your iOS skills further as you create some user interface in code, manage table views more carefully, and get some experience with closures.
 
 - ✅ [Day 24](https://github.com/rafaelapaula/hundred-days-of-swift/commit/e8443cd25918f8c1881391ebe68a4c532324b504) – Project 4, part one
@@ -55,10 +55,10 @@ The next three projects we’re looking at will push your iOS skills further as 
 - ✅ [Day 28](https://github.com/rafaelapaula/hundred-days-of-swift/commit/65109ae24655dc7ce37c59ec01fe023f086b986a) – Project 5, part two
 - ✅ [Day 29](https://github.com/rafaelapaula/hundred-days-of-swift/commit/95587f4640cad6729ff60c60eae0208c87225724) – Project 5, part three
 - ✅ [Day 30](https://github.com/rafaelapaula/hundred-days-of-swift/commit/690961749b362061b407d60e8e4d49f56a614088) – Project 6, part one
-- Day 31 – Project 6, part two
+- ✅ [Day 31](https://github.com/rafaelapaula/hundred-days-of-swift/commit/cbe665c50e1b2d8ff541451c078e8556ee2abb2f) – Project 6, part two
  
 
-### Day 32: Consolidation III
+### 📝 Day 32: Consolidation III
 You’ve learned about WebKit, UIAlertController, Auto Layout, and more – some more fundamentals of iOS development. Before we continue on to more projects, let’s take a moment to review what you’ve learned.
 
 - Day 32 – Milestone: Projects 4-6
