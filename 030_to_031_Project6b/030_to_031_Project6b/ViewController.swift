@@ -57,7 +57,8 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     addViews()
-    addConstraints()
+//    addConstraints_ViewWithFormat()
+    addConstraints_Anchors()
   }
   
   func addViews() {
@@ -68,7 +69,33 @@ class ViewController: UIViewController {
     view.addSubview(label5)
   }
   
-  func addConstraints() {
+  func addConstraints_Anchors() {
+    var previous: UILabel?
+    
+    for label in [label1, label2, label3, label4, label5] {
+      
+      NSLayoutConstraint.activate([
+        // the labels won’t go under the safe area
+        label.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+        label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+        label.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.2, constant: -10)
+      ])
+      
+      if let previous = previous {
+        // we have a previous label - create a height constraint
+        label.topAnchor.constraint(equalTo: previous.bottomAnchor, constant: 10).isActive = true
+      } else {
+        // this is the first label
+        label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
+      }
+
+      // set the previous label to be the current one, for the next loop iteration
+      previous = label
+    }
+  }
+  
+  func addConstraints_ViewWithFormat() {
+    let metrics = ["labelHeight": 88]
     let viewsDictionary = [
       "label1": label1,
       "label2": label2,
@@ -87,11 +114,23 @@ class ViewController: UIViewController {
       view.addConstraints(constraint)
     }
     
+    let verticalConstraints = "V:|"
+      + "[label1(labelHeight@999)]" // Setting priority height
+      + "-"
+      + "[label2(label1)]" // It needs to have the same height as label1
+      + "-"
+      + "[label3(label1)]"
+      + "-"
+      + "[label4(label1)]"
+      + "-"
+      + "[label5(label1)]"
+      + "->=10-|" // the bottom space needs to be greater or equal to 10
+    
     view.addConstraints(
       NSLayoutConstraint.constraints(
-        withVisualFormat: "V:|[label1]-[label2]-[label3]-[label4]-[label5]",
+        withVisualFormat:verticalConstraints,
         options: [],
-        metrics: nil,
+        metrics: metrics,
         views: viewsDictionary
       )
     )
