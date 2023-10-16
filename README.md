@@ -1,4 +1,4 @@
-# hundred-days-of-swift  ![](https://geps.dev/progress/31)
+# hundred-days-of-swift  ![](https://geps.dev/progress/32)
 A way to save my progress learning swift from [100 days of swift challenge](https://www.hackingwithswift.com/100/)
 
 
@@ -58,13 +58,13 @@ The next three projects we’re looking at will push your iOS skills further as 
 - ✅ [Day 31](https://github.com/rafaelapaula/hundred-days-of-swift/commit/cbe665c50e1b2d8ff541451c078e8556ee2abb2f) – Project 6, part two
  
 
-### 📝 Day 32: Consolidation III
+### ✅ Day 32: Consolidation III
 You’ve learned about WebKit, UIAlertController, Auto Layout, and more – some more fundamentals of iOS development. Before we continue on to more projects, let’s take a moment to review what you’ve learned.
 
-- Day 32 – Milestone: Projects 4-6
+- ✅ [Day 32](https://github.com/rafaelapaula/hundred-days-of-swift/commit/faf0fca8b714e37898d11abf1d9aaee2660776b4) – Milestone: Projects 4-6
  
 
-### Days 33-40: Codable, buttons, and GCD
+### 📝 Days 33-40: Codable, buttons, and GCD
 The next three projects we’ll be building projects where you meet some of the most important topics in iOS development: working with data from the internet, and taking advantage of the raw power of iOS devices. Of course, you’ll also be making useful products along the way!
 
 - Day 33 – Project 7, part one
