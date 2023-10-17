@@ -1,4 +1,4 @@
-# hundred-days-of-swift  ![](https://geps.dev/progress/32)
+# hundred-days-of-swift  ![](https://geps.dev/progress/33)
 A way to save my progress learning swift from [100 days of swift challenge](https://www.hackingwithswift.com/100/)
 
 
@@ -67,7 +67,7 @@ You’ve learned about WebKit, UIAlertController, Auto Layout, and more – some
 ### 📝 Days 33-40: Codable, buttons, and GCD
 The next three projects we’ll be building projects where you meet some of the most important topics in iOS development: working with data from the internet, and taking advantage of the raw power of iOS devices. Of course, you’ll also be making useful products along the way!
 
-- Day 33 – Project 7, part one
+- ✅ [Day 33](https://github.com/rafaelapaula/hundred-days-of-swift/commit/f2b8ccc7e4ad69e59038a3b28a85389364a636e9) – Project 7, part one
 - Day 34 – Project 7, part two
 - Day 35 – Project 7, part three
 - Day 36 – Project 8, part one
