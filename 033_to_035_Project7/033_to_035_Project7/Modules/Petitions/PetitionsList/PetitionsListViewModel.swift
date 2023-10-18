@@ -1,6 +1,6 @@
 import Foundation
 
-protocol RecentPetitionsViewModelProtocol {
+protocol PetitionsListViewModelProtocol {
   var petitions: [Petition] { get }
   
   func load()
@@ -11,18 +11,23 @@ protocol PetitionsDelegate: AnyObject {
   func didGetAnError(message: String)
 }
 
-class RecentPetitionsViewModel: RecentPetitionsViewModelProtocol {
+class PetitionsListViewModel: PetitionsListViewModelProtocol {
   weak var delegate: PetitionsDelegate?
   
   var petitions = [Petition]()
+  let url: URL
   
-  init(delegate: PetitionsDelegate? = nil) {
+  init(
+    delegate: PetitionsDelegate? = nil,
+    url: URL
+  ) {
     self.delegate = delegate
+    self.url = url
   }
   
   func load() {
     guard
-      let data = try? Data(contentsOf: Constants.Urls.petitions)
+      let data = try? Data(contentsOf: url)
     else {
       delegate?.didGetAnError(message: "Unable to get data from URL")
       return

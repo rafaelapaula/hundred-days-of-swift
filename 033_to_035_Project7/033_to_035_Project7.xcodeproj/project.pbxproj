@@ -9,31 +9,33 @@
 /* Begin PBXBuildFile section */
 		132AB7182ADE8CA00072AF03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132AB7172ADE8CA00072AF03 /* AppDelegate.swift */; };
 		132AB71A2ADE8CA00072AF03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132AB7192ADE8CA00072AF03 /* SceneDelegate.swift */; };
-		132AB71C2ADE8CA00072AF03 /* RecentPetitionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132AB71B2ADE8CA00072AF03 /* RecentPetitionsViewController.swift */; };
+		132AB71C2ADE8CA00072AF03 /* PetitionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132AB71B2ADE8CA00072AF03 /* PetitionsListViewController.swift */; };
 		132AB7212ADE8CA30072AF03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 132AB7202ADE8CA30072AF03 /* Assets.xcassets */; };
 		132AB7242ADE8CA30072AF03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 132AB7222ADE8CA30072AF03 /* LaunchScreen.storyboard */; };
 		132AB72D2ADE8F4F0072AF03 /* MenuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132AB72C2ADE8F4F0072AF03 /* MenuTabBarController.swift */; };
-		132AB7302ADE92180072AF03 /* RecentPetitionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132AB72F2ADE92180072AF03 /* RecentPetitionsViewModel.swift */; };
+		132AB7302ADE92180072AF03 /* PetitionsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132AB72F2ADE92180072AF03 /* PetitionsListViewModel.swift */; };
 		132AB7322ADE92C00072AF03 /* PetitionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132AB7312ADE92C00072AF03 /* PetitionViewCell.swift */; };
 		132AB7352ADE94D90072AF03 /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132AB7342ADE94D90072AF03 /* Petition.swift */; };
 		132AB7372ADE95410072AF03 /* Petitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132AB7362ADE95410072AF03 /* Petitions.swift */; };
-		132AB73B2ADE95EF0072AF03 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132AB73A2ADE95EF0072AF03 /* Constants.swift */; };
+		132AB73B2ADE95EF0072AF03 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132AB73A2ADE95EF0072AF03 /* URLExtension.swift */; };
+		132AB73E2ADFE3320072AF03 /* PetitionsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132AB73D2ADFE3320072AF03 /* PetitionsDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		132AB7142ADE8CA00072AF03 /* 033_to_035_Project7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 033_to_035_Project7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		132AB7172ADE8CA00072AF03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		132AB7192ADE8CA00072AF03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		132AB71B2ADE8CA00072AF03 /* RecentPetitionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPetitionsViewController.swift; sourceTree = "<group>"; };
+		132AB71B2ADE8CA00072AF03 /* PetitionsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetitionsListViewController.swift; sourceTree = "<group>"; };
 		132AB7202ADE8CA30072AF03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		132AB7232ADE8CA30072AF03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		132AB7252ADE8CA30072AF03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		132AB72C2ADE8F4F0072AF03 /* MenuTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabBarController.swift; sourceTree = "<group>"; };
-		132AB72F2ADE92180072AF03 /* RecentPetitionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPetitionsViewModel.swift; sourceTree = "<group>"; };
+		132AB72F2ADE92180072AF03 /* PetitionsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetitionsListViewModel.swift; sourceTree = "<group>"; };
 		132AB7312ADE92C00072AF03 /* PetitionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetitionViewCell.swift; sourceTree = "<group>"; };
 		132AB7342ADE94D90072AF03 /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
 		132AB7362ADE95410072AF03 /* Petitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petitions.swift; sourceTree = "<group>"; };
-		132AB73A2ADE95EF0072AF03 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		132AB73A2ADE95EF0072AF03 /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
+		132AB73D2ADFE3320072AF03 /* PetitionsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetitionsDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +72,7 @@
 				132AB7192ADE8CA00072AF03 /* SceneDelegate.swift */,
 				132AB7332ADE94C60072AF03 /* Models */,
 				132AB7382ADE95790072AF03 /* Modules */,
-				132AB72C2ADE8F4F0072AF03 /* MenuTabBarController.swift */,
-				132AB73A2ADE95EF0072AF03 /* Constants.swift */,
+				132AB73F2ADFEDE90072AF03 /* Extensions */,
 				132AB7202ADE8CA30072AF03 /* Assets.xcassets */,
 				132AB7222ADE8CA30072AF03 /* LaunchScreen.storyboard */,
 				132AB7252ADE8CA30072AF03 /* Info.plist */,
@@ -79,14 +80,14 @@
 			path = 033_to_035_Project7;
 			sourceTree = "<group>";
 		};
-		132AB72E2ADE91FE0072AF03 /* RecentPetitions */ = {
+		132AB72E2ADE91FE0072AF03 /* PetitionsList */ = {
 			isa = PBXGroup;
 			children = (
-				132AB71B2ADE8CA00072AF03 /* RecentPetitionsViewController.swift */,
-				132AB72F2ADE92180072AF03 /* RecentPetitionsViewModel.swift */,
+				132AB71B2ADE8CA00072AF03 /* PetitionsListViewController.swift */,
+				132AB72F2ADE92180072AF03 /* PetitionsListViewModel.swift */,
 				132AB7312ADE92C00072AF03 /* PetitionViewCell.swift */,
 			);
-			path = RecentPetitions;
+			path = PetitionsList;
 			sourceTree = "<group>";
 		};
 		132AB7332ADE94C60072AF03 /* Models */ = {
@@ -101,6 +102,7 @@
 		132AB7382ADE95790072AF03 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				132AB7402ADFEDFD0072AF03 /* Menu */,
 				132AB7392ADE95AF0072AF03 /* Petitions */,
 			);
 			path = Modules;
@@ -109,9 +111,34 @@
 		132AB7392ADE95AF0072AF03 /* Petitions */ = {
 			isa = PBXGroup;
 			children = (
-				132AB72E2ADE91FE0072AF03 /* RecentPetitions */,
+				132AB73C2ADFE30A0072AF03 /* PetitionsDetails */,
+				132AB72E2ADE91FE0072AF03 /* PetitionsList */,
 			);
 			path = Petitions;
+			sourceTree = "<group>";
+		};
+		132AB73C2ADFE30A0072AF03 /* PetitionsDetails */ = {
+			isa = PBXGroup;
+			children = (
+				132AB73D2ADFE3320072AF03 /* PetitionsDetailsViewController.swift */,
+			);
+			path = PetitionsDetails;
+			sourceTree = "<group>";
+		};
+		132AB73F2ADFEDE90072AF03 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				132AB73A2ADE95EF0072AF03 /* URLExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		132AB7402ADFEDFD0072AF03 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				132AB72C2ADE8F4F0072AF03 /* MenuTabBarController.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,12 +214,13 @@
 				132AB7352ADE94D90072AF03 /* Petition.swift in Sources */,
 				132AB7372ADE95410072AF03 /* Petitions.swift in Sources */,
 				132AB72D2ADE8F4F0072AF03 /* MenuTabBarController.swift in Sources */,
-				132AB7302ADE92180072AF03 /* RecentPetitionsViewModel.swift in Sources */,
-				132AB71C2ADE8CA00072AF03 /* RecentPetitionsViewController.swift in Sources */,
+				132AB7302ADE92180072AF03 /* PetitionsListViewModel.swift in Sources */,
+				132AB71C2ADE8CA00072AF03 /* PetitionsListViewController.swift in Sources */,
+				132AB73E2ADFE3320072AF03 /* PetitionsDetailsViewController.swift in Sources */,
 				132AB7182ADE8CA00072AF03 /* AppDelegate.swift in Sources */,
 				132AB7322ADE92C00072AF03 /* PetitionViewCell.swift in Sources */,
 				132AB71A2ADE8CA00072AF03 /* SceneDelegate.swift in Sources */,
-				132AB73B2ADE95EF0072AF03 /* Constants.swift in Sources */,
+				132AB73B2ADE95EF0072AF03 /* URLExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
