@@ -1,9 +1,9 @@
 import Foundation
 
 protocol PetitionsListViewModelProtocol {
-  var petitions: [Petition] { get }
-  
+  func petitions() -> [Petition]
   func load()
+  func filter(with text: String)
 }
 
 protocol PetitionsDelegate: AnyObject {
@@ -14,7 +14,10 @@ protocol PetitionsDelegate: AnyObject {
 class PetitionsListViewModel: PetitionsListViewModelProtocol {
   weak var delegate: PetitionsDelegate?
   
-  var petitions = [Petition]()
+  var allPetitions = [Petition]()
+  var filteredPetitions = [Petition]()
+  var searchText = ""
+  
   let url: URL
   
   init(
@@ -23,6 +26,23 @@ class PetitionsListViewModel: PetitionsListViewModelProtocol {
   ) {
     self.delegate = delegate
     self.url = url
+  }
+  
+  func petitions() -> [Petition] {
+    if searchText.isEmpty {
+      return allPetitions
+    }
+    return filteredPetitions
+  }
+  
+  func filter(with text: String) {
+    searchText = text.lowercased()
+    
+    filteredPetitions = allPetitions.filter({
+      $0.title.lowercased().contains(searchText) || $0.body.lowercased().contains(searchText)
+    })
+    
+    delegate?.shouldReloadList()
   }
   
   func load() {
@@ -45,7 +65,7 @@ class PetitionsListViewModel: PetitionsListViewModelProtocol {
       return
     }
     
-    self.petitions = petitions.results
+    self.allPetitions = petitions.results
     delegate?.shouldReloadList()
     
   }

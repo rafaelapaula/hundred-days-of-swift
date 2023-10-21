@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  033_to_035_Project7
-//
-//  Created by rafaela.lourenco on 17/10/23.
-//
-
 import UIKit
 
 class PetitionsListViewController: UITableViewController {
@@ -19,7 +12,44 @@ class PetitionsListViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     registerViewCell()
+    configureNavigationBar()
     viewModel?.load()
+  }
+  
+  func configureNavigationBar() {
+    
+    let searchController = UISearchController(searchResultsController: nil)
+    searchController.searchResultsUpdater = self
+    searchController.obscuresBackgroundDuringPresentation = false
+    searchController.searchBar.placeholder = "Type what you want to find.."
+    
+    navigationItem.searchController = searchController
+    navigationItem.hidesSearchBarWhenScrolling = false
+    
+    navigationItem.rightBarButtonItem = UIBarButtonItem(
+      title: "Info",
+      image: UIImage(systemName: "info.circle"),
+      target: self,
+      action: #selector(didTapInformation)
+    )
+  }
+  
+  @objc func didTapInformation() {
+    let ac = UIAlertController(
+      title: "Information",
+      message: "The data comes from the We The People API of the Whitehouse",
+      preferredStyle: .alert)
+    let okAction = UIAlertAction(title: "Ok", style: .default)
+    
+    ac.addAction(okAction)
+    
+    present(ac, animated: true)
+  }
+}
+
+extension PetitionsListViewController: UISearchResultsUpdating {
+  func updateSearchResults(for searchController: UISearchController) {
+    viewModel?.filter(with: searchController.searchBar.text ?? "") 
   }
 }
 
@@ -40,18 +70,24 @@ extension PetitionsListViewController {
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    viewModel?.petitions.count ?? 0
+    viewModel?.petitions().count ?? 0
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: PetitionViewCell.id, for: indexPath)
-    cell.textLabel?.text = viewModel?.petitions[indexPath.row].title
-    cell.detailTextLabel?.text = viewModel?.petitions[indexPath.row].body
+    guard
+      let cell = tableView.dequeueReusableCell(withIdentifier: PetitionViewCell.id, for: indexPath) as? PetitionViewCell,
+      let petition = viewModel?.petitions()[indexPath.row]
+    else {
+      return UITableViewCell()
+    }
+    
+    cell.configure(title: petition.title, description: petition.body)
+    
     return cell
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    guard let petition = viewModel?.petitions[indexPath.row] else { return }
+    guard let petition = viewModel?.petitions()[indexPath.row] else { return }
     let detailViewController = PetitionsDetailsViewController(petition: petition)
     navigationController?.pushViewController(detailViewController, animated: true)
   }

@@ -30,7 +30,8 @@ class PetitionsDetailsViewController: UIViewController {
           <style> body { font-size: 150%; } </style>
         </head>
         <body>
-          \(petition.body)
+          <h4>\(petition.title)</h4>
+          <text>\(petition.body)</text>
         </body>
       </html>
     """

@@ -20,13 +20,13 @@ class MenuTabBarController: UITabBarController {
       title: "Recent",
       image: .checkmark,
       tag: recentPetitions.tag)
-    recentPetitions.viewController.title = "Recent"
+    recentPetitions.viewController.viewControllers.first?.title = "Recent"
     
     topRatedPetitions.viewController.tabBarItem = UITabBarItem(
       title: "Top Rated",
       image: .add,
       tag: topRatedPetitions.tag)
-    topRatedPetitions.viewController.title = "Top Rated"
+    topRatedPetitions.viewController.viewControllers.first?.title = "Top Rated"
     
     viewControllers = [
       recentPetitions.viewController,
