@@ -12,6 +12,8 @@
 		132AB7212ADE8CA30072AF03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 132AB7202ADE8CA30072AF03 /* Assets.xcassets */; };
 		132AB7242ADE8CA30072AF03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 132AB7222ADE8CA30072AF03 /* LaunchScreen.storyboard */; };
 		132AB72D2ADE8F4F0072AF03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132AB72C2ADE8F4F0072AF03 /* ViewController.swift */; };
+		D1B593052AE92CAB00820FC4 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = D1B593032AE92CAB00820FC4 /* level1.txt */; };
+		D1B593062AE92CAB00820FC4 /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = D1B593042AE92CAB00820FC4 /* level2.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		132AB7232ADE8CA30072AF03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		132AB7252ADE8CA30072AF03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		132AB72C2ADE8F4F0072AF03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D1B593032AE92CAB00820FC4 /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
+		D1B593042AE92CAB00820FC4 /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,8 @@
 				132AB7202ADE8CA30072AF03 /* Assets.xcassets */,
 				132AB7222ADE8CA30072AF03 /* LaunchScreen.storyboard */,
 				132AB7252ADE8CA30072AF03 /* Info.plist */,
+				D1B593032AE92CAB00820FC4 /* level1.txt */,
+				D1B593042AE92CAB00820FC4 /* level2.txt */,
 				132AB7152ADE8CA00072AF03 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,7 +120,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1B593052AE92CAB00820FC4 /* level1.txt in Resources */,
 				132AB7242ADE8CA30072AF03 /* LaunchScreen.storyboard in Resources */,
+				D1B593062AE92CAB00820FC4 /* level2.txt in Resources */,
 				132AB7212ADE8CA30072AF03 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
