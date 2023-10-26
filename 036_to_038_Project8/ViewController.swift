@@ -9,9 +9,16 @@ class ViewController: UIViewController {
   
   var score = 0 {
     didSet {
-      scoreLabel.text = "Score: \(score)"
+      scoreLabel.text = "Score: \(score - errorsScore)"
     }
   }
+  
+  var errorsScore = 0 {
+    didSet {
+      scoreLabel.text = "Score: \(score - errorsScore)"
+    }
+  }
+  
   var level = 1
   
   lazy var cluesLabel: UILabel = {
@@ -84,6 +91,9 @@ class ViewController: UIViewController {
         button.titleLabel?.font = .systemFont(ofSize: 36.0)
         button.setTitle("WWW", for: .normal)
         button.addTarget(self, action: #selector(letterTapped), for: .touchUpInside)
+        button.layer.cornerRadius = 5.0
+        button.layer.borderWidth = 1.0
+        button.layer.borderColor = UIColor.lightGray.cgColor
         
         button.frame = CGRect(
           x: colum * constants.width,
@@ -170,7 +180,15 @@ class ViewController: UIViewController {
     guard 
       let answerText = currentAnswer.text,
       let solutionsPosition = solutions.firstIndex(of: answerText)
-    else { return }
+    else {
+      
+      errorsScore += 1
+      let ac = UIAlertController(title: "Oh no!", message: "You are wrong, try again!", preferredStyle: .alert)
+      ac.addAction(UIAlertAction(title: "Ok :(", style: .cancel))
+      present(ac, animated: true)
+      
+      return
+    }
     
     activatedButtons.removeAll()
     var splitAnswers = answersLabel.text?.components(separatedBy: "\n")
