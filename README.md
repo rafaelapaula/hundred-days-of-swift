@@ -1,4 +1,4 @@
-# hundred-days-of-swift  ![](https://geps.dev/progress/39)
+# hundred-days-of-swift  ![](https://geps.dev/progress/40)
 A way to save my progress learning swift from [100 days of swift challenge](https://www.hackingwithswift.com/100/)
 
 
@@ -64,7 +64,7 @@ You’ve learned about WebKit, UIAlertController, Auto Layout, and more – some
 - ✅ [Day 32](https://github.com/rafaelapaula/hundred-days-of-swift/commit/faf0fca8b714e37898d11abf1d9aaee2660776b4) – Milestone: Projects 4-6
  
 
-### 📝 Days 33-40: Codable, buttons, and GCD
+### ✅ Days 33-40: Codable, buttons, and GCD
 The next three projects we’ll be building projects where you meet some of the most important topics in iOS development: working with data from the internet, and taking advantage of the raw power of iOS devices. Of course, you’ll also be making useful products along the way!
 
 - ✅ [Day 33](https://github.com/rafaelapaula/hundred-days-of-swift/commit/f2b8ccc7e4ad69e59038a3b28a85389364a636e9) – Project 7, part one
@@ -74,10 +74,10 @@ The next three projects we’ll be building projects where you meet some of the 
 - ✅ [Day 37](https://github.com/rafaelapaula/hundred-days-of-swift/commit/e098d2e5bc3c4cce603db77cf1d569141fd23ed3) – Project 8, part two
 - ✅ [Day 38](https://github.com/rafaelapaula/hundred-days-of-swift/commit/e244ec57f0c25affe6811ba6f31f9b2f7706a4cc) – Project 8, part three
 - ✅ [Day 39](https://github.com/rafaelapaula/hundred-days-of-swift/commit/5625ba3f1ed7cf427df556c371d56e437cc7a547) – Project 9, part one
-- Day 40 – Project 9, part two
+- ✅ [Day 40](https://github.com/rafaelapaula/hundred-days-of-swift/commit/3a9b6a5c7813de5d1ca77a455cf7f7e12d4174a7) – Project 9, part two
  
 
-### Day 41: Consolidation IV
+### 📝 Day 41: Consolidation IV
 You’ve tackled some really big projects these last few days, not least learning about building a user interface in code and running code in background threads. It’s time to take a moment to review what you’ve learned.
 
 - Day 41 – Milestone: Projects 7-9
