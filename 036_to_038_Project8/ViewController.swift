@@ -9,17 +9,18 @@ class ViewController: UIViewController {
   
   var score = 0 {
     didSet {
-      scoreLabel.text = "Score: \(score - errorsScore)"
-    }
-  }
-  
-  var errorsScore = 0 {
-    didSet {
-      scoreLabel.text = "Score: \(score - errorsScore)"
+      scoreLabel.text = "Score: \(score)"
     }
   }
   
   var level = 1
+  
+  lazy var loadingView: UIActivityIndicatorView = {
+    let loader = UIActivityIndicatorView(style: .large)
+    loader.translatesAutoresizingMaskIntoConstraints = false
+    loader.hidesWhenStopped = true
+    return loader
+  }()
   
   lazy var cluesLabel: UILabel = {
     let label = UILabel()
@@ -82,6 +83,13 @@ class ViewController: UIViewController {
     return view
   }()
   
+  lazy var contentView: UIView = {
+    let view = UIView()
+    view.translatesAutoresizingMaskIntoConstraints = false
+    view.frame = view.frame
+    return view
+  }()
+  
   lazy var letterButtons: [UIButton] = {
     var buttons = [UIButton]()
     
@@ -127,10 +135,16 @@ class ViewController: UIViewController {
     view.addSubview(buttonsView)
     
     letterButtons.forEach { buttonsView.addSubview($0) }
+    
+//    view.addSubview(contentView)
+    view.addSubview(loadingView)
   }
   
   func addConstraints() {
     NSLayoutConstraint.activate([
+      loadingView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      loadingView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+      
       scoreLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
       scoreLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
       
@@ -177,16 +191,19 @@ class ViewController: UIViewController {
   }
   
   @objc func submitTapped(_ sender: UIButton) {
-    guard 
+    loadingView.startAnimating()
+    
+    guard
       let answerText = currentAnswer.text,
       let solutionsPosition = solutions.firstIndex(of: answerText)
     else {
       
-      errorsScore += 1
+      score -= 1
       let ac = UIAlertController(title: "Oh no!", message: "You are wrong, try again!", preferredStyle: .alert)
       ac.addAction(UIAlertAction(title: "Ok :(", style: .cancel))
       present(ac, animated: true)
       
+      loadingView.stopAnimating()
       return
     }
     
@@ -203,6 +220,8 @@ class ViewController: UIViewController {
       ac.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: levelUp))
       present(ac, animated: true)
     }
+    
+    loadingView.stopAnimating()
   }
   
   func levelUp(action: UIAlertAction) {
@@ -224,6 +243,8 @@ class ViewController: UIViewController {
   }
   
   func loadLevel() {
+    loadingView.startAnimating()
+    
     var clueString = ""
     var solutionsString = ""
     var letterBits = [String]()
@@ -260,5 +281,7 @@ class ViewController: UIViewController {
         letterButtons[i].setTitle(letterBits[i], for: .normal)
       }
     }
+    
+    loadingView.stopAnimating()
   }
 }

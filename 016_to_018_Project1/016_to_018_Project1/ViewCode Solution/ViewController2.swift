@@ -17,10 +17,11 @@ class ViewController2: UITableViewController {
     title = "Storm Viewer"
     navigationController?.navigationBar.prefersLargeTitles = true
     
-    self.loadPictures()
+    performSelector(inBackground: #selector(loadPictures), with: nil)
+    tableView.reloadData()
   }
   
-  func loadPictures() {
+  @objc func loadPictures() {
     let fileManager = FileManager.default
     
     guard

@@ -46,14 +46,19 @@ class PetitionsListViewModel: PetitionsListViewModelProtocol {
   }
   
   func load() {
-    guard
-      let data = try? Data(contentsOf: url)
-    else {
-      delegate?.didGetAnError(message: "Unable to get data from URL")
-      return
+    DispatchQueue.global(qos: .background).async { [weak self] in
+      guard
+        let url = self?.url,
+        let data = try? Data(contentsOf: url)
+      else {
+        DispatchQueue.main.async { [weak self] in
+          self?.delegate?.didGetAnError(message: "Unable to get data from URL")
+        }
+        return
+      }
+      
+      self?.parse(data)
     }
-    
-    parse(data)
   }
   
   func parse(_ data: Data) {
@@ -61,12 +66,18 @@ class PetitionsListViewModel: PetitionsListViewModelProtocol {
     guard
       let petitions = try? decoder.decode(Petitions.self, from: data)
     else {
-      delegate?.didGetAnError(message: "Unable to parse the information")
+      DispatchQueue.main.async { [weak self] in
+        self?.delegate?.didGetAnError(message: "Unable to parse the information")
+      }
       return
     }
     
     self.allPetitions = petitions.results
-    delegate?.shouldReloadList()
+    
+    DispatchQueue.main.async { [weak self] in
+      self?.delegate?.shouldReloadList()
+    }
+    
     
   }
 }
