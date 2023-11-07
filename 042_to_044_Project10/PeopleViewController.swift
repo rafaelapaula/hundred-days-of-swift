@@ -1,44 +1,92 @@
 import UIKit
 
-class PeopleViewController: UICollectionViewController {
+class PeopleViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UINavigationControllerDelegate {
   
-  override func loadView() {
-    // create a layout to be used
-    let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-    // make sure that there is a slightly larger gap at the top of each row
-    layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    // set a standard item size of 60 * 60
-    layout.itemSize = CGSize(width: 50, height: 180)
-    // the layout scrolls horizontally
+  var people = [Person]()
+  
+  convenience init() {
+    let layout = UICollectionViewFlowLayout()
+    layout.sectionInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+    layout.itemSize = CGSize(width: 100, height: 180)
     layout.scrollDirection = .vertical
-    // set the frame and layout
-    collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
-    // set the view to be this UICollectionView
-    self.view = collectionView
+    self.init(collectionViewLayout: layout)
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     configureView()
+    configureNavigationBar()
+  }
+  
+  func configureNavigationBar() {
+    navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewPerson))
   }
   
   func configureView() {
     collectionView.backgroundColor = .red
     collectionView.register(PersonCollectionViewCell.self, forCellWithReuseIdentifier: PersonCollectionViewCell.description())
-    view.backgroundColor = .blue
+    view.backgroundColor = .white
+    collectionView.backgroundColor = .lightGray.withAlphaComponent(0.2)
   }
   
-  
-  
+  @objc func addNewPerson() {
+    let picker = UIImagePickerController()
+    picker.allowsEditing = true
+    picker.delegate = self
+    present(picker, animated: true)
+  }
+}
+
+extension PeopleViewController {
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 10
+    return people.count
   }
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PersonCollectionViewCell.description(), for: indexPath) as? PersonCollectionViewCell else {
       fatalError("Unable to dequeue PersonCell.")
     }
-    cell.configure()
+    let person = people[indexPath.item]
+    cell.configure(with: person)
     return cell
   }
+  
+  override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let person = people[indexPath.item]
+    
+    let ac = UIAlertController(title: "Rename person", message: nil, preferredStyle: .alert)
+    ac.addTextField()
+    
+    ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+    
+    ac.addAction(UIAlertAction(title: "OK", style: .default) { [weak self, weak ac] _ in
+      guard let newName = ac?.textFields?[0].text else { return }
+      person.name = newName
+      
+      self?.collectionView.reloadData()
+    })
+    
+    present(ac, animated: true)
+  }
+}
+
+extension PeopleViewController: UIImagePickerControllerDelegate {
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    guard let image = info[.editedImage] as? UIImage else { return }
+    
+    let imageName = UUID().uuidString
+    let imagePath = getDocumentsDirectory().appendingPathComponent(imageName)
+    
+    if let jpegData = image.jpegData(compressionQuality: 0.8) {
+      try? jpegData.write(to: imagePath)
+    }
+    
+    let person = Person(name: "Unknown", image: imageName)
+    people.append(person)
+    collectionView.reloadData()
+    
+    dismiss(animated: true)
+  }
+  
+
 }

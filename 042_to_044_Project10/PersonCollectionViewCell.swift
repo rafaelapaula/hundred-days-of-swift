@@ -4,6 +4,11 @@ class PersonCollectionViewCell: UICollectionViewCell {
   lazy var personImageView: UIImageView = {
     let imageView = UIImageView()
     imageView.translatesAutoresizingMaskIntoConstraints = false
+    imageView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.8).cgColor
+    imageView.layer.borderWidth = 1.0
+    imageView.layer.cornerRadius = 3.0
+    imageView.contentMode = .scaleAspectFill
+    imageView.clipsToBounds = true
     return imageView
   }()
   
@@ -11,6 +16,7 @@ class PersonCollectionViewCell: UICollectionViewCell {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.font = .systemFont(ofSize: 16.0, weight: .bold)
+    label.textAlignment = .left
     label.text = "Person"
     return label
   }()
@@ -25,9 +31,21 @@ class PersonCollectionViewCell: UICollectionViewCell {
   
   convenience init() {
     self.init()
+    
+  }
+  
+  required init?(coder: NSCoder) {
+    super.init(coder: coder)
+  }
+  
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    
     addViews()
     addConstraints()
-    backgroundColor = .lightGray
+    backgroundColor = .white
+    
+    layer.cornerRadius = 3.0
   }
   
   func addViews() {
@@ -38,15 +56,19 @@ class PersonCollectionViewCell: UICollectionViewCell {
   
   func addConstraints() {
     NSLayoutConstraint.activate([
+      nameLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.2),
       containerStackView.topAnchor.constraint(equalTo: topAnchor, constant: 8.0),
-      containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 8.0),
+      containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8.0),
       containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8.0),
-      containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 8.0)
+      containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8.0)
     ])
   }
   
-  func configure() {
+  func configure(with person: Person) {
+    nameLabel.text = person.name
     
+    let path = getDocumentsDirectory().appendingPathComponent(person.image)
+    personImageView.image = UIImage(contentsOfFile: path.path)
   }
   
   override class func description() -> String {
