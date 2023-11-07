@@ -1,4 +1,4 @@
-# hundred-days-of-swift  ![](https://geps.dev/progress/42)
+# hundred-days-of-swift  ![](https://geps.dev/progress/43)
 A way to save my progress learning swift from [100 days of swift challenge](https://www.hackingwithswift.com/100/)
 
 
@@ -87,7 +87,7 @@ You’ve tackled some really big projects these last few days, not least learnin
 The next three projects we’ll be making are markedly different from the previous 9 – you’ll learn about making grids rather than tables, learn how to make high-performance 2D games using SpriteKit, and, at last, learn how to save user data.
 
 - ✅ [Day 42](https://github.com/rafaelapaula/hundred-days-of-swift/commit/e7f411b0748094283c2f38b5365b869d8fca8d7e) – Project 10, part one
-- Day 43 – Project 10, part two
+- ✅ [Day 43](https://github.com/rafaelapaula/hundred-days-of-swift/commit/b7c19d40d077222f36bfb11a34f28895040dc2bf) – Project 10, part two
 - Day 44 – Project 10, part three
 - Day 45 – Project 11, part one
 - Day 46 – Project 11, part two
