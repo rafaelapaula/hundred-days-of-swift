@@ -1,4 +1,4 @@
-# hundred-days-of-swift  ![](https://geps.dev/progress/43)
+# hundred-days-of-swift  ![](https://geps.dev/progress/44)
 A way to save my progress learning swift from [100 days of swift challenge](https://www.hackingwithswift.com/100/)
 
 
@@ -88,7 +88,7 @@ The next three projects we’ll be making are markedly different from the previo
 
 - ✅ [Day 42](https://github.com/rafaelapaula/hundred-days-of-swift/commit/e7f411b0748094283c2f38b5365b869d8fca8d7e) – Project 10, part one
 - ✅ [Day 43](https://github.com/rafaelapaula/hundred-days-of-swift/commit/b7c19d40d077222f36bfb11a34f28895040dc2bf) – Project 10, part two
-- Day 44 – Project 10, part three
+- ✅ [Day 44](https://github.com/rafaelapaula/hundred-days-of-swift/commit/6b778a3615362c4a0a8a9ceffbf552216c52ce3c) – Project 10, part three
 - Day 45 – Project 11, part one
 - Day 46 – Project 11, part two
 - Day 47 – Project 11, part three
