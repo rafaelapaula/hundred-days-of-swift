@@ -5,6 +5,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   var scoreLabel: SKLabelNode!
   var editLabel: SKLabelNode!
   
+  var numberOfBalls = 5
+  
   var score = 0 {
     didSet {
       scoreLabel.text = "Score: \(score)"
@@ -67,8 +69,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       if editingMode {
         let box = createBox(at: location)
         addChild(box)
-      } else {
-        let ball = createBall(at: location)
+      } else if numberOfBalls > 0 {
+        let fixedYLocation = CGPoint(x: location.x, y: 700.00)
+        let ball = createBall(at: fixedYLocation)
+        numberOfBalls -= 1
         addChild(ball)
       }
     }
@@ -136,11 +140,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     node.position = location
     node.physicsBody = SKPhysicsBody(rectangleOf: node.size)
     node.physicsBody?.isDynamic = false
+    node.name = "obstacle"
     return node
   }
   
   func createBall(at location: CGPoint) -> SKSpriteNode {
-    let node = SKSpriteNode(imageNamed: "ballRed")
+    let balls = ["ballBlue", "ballCyan", "ballGreen", "ballGrey", "ballPurple", "ballRed", "ballYellow"]
+    let node = SKSpriteNode(imageNamed: balls.randomElement() ?? "ballRed")
     node.position = location
     node.physicsBody = SKPhysicsBody(circleOfRadius: node.size.width / 2.0)
     node.physicsBody?.restitution = 0.4
@@ -158,16 +164,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   
   func collisionBetween(ball: SKNode, object: SKNode) {
     if object.name == "good" {
-      destroy(ball: ball)
+      destroy(ball)
       score += 1
+      numberOfBalls += 1
     } else if object.name == "bad" {
-      destroy(ball: ball)
+      destroy(ball)
       score -= 1
+    } else if object.name == "obstacle" {
+      destroy(object)
     }
   }
   
-  func destroy(ball: SKNode) {
-    ball.removeFromParent()
+  func destroy(_ node: SKNode) {
+    if 
+      let fireParticles = SKEmitterNode(fileNamed: "FireParticles"),
+      node.name != "obstacle" {
+      fireParticles.position = node.position
+      addChild(fireParticles)
+    }
+    node.removeFromParent()
   }
 }
 

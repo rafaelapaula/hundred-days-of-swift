@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D14681482B88E2B000674E25 /* FireParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = D14681472B88E2B000674E25 /* FireParticles.sks */; };
 		D1A1B11F2B02E23900D6F338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1B11E2B02E23900D6F338 /* AppDelegate.swift */; };
 		D1A1B1212B02E23A00D6F338 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D1A1B1202B02E23A00D6F338 /* GameScene.sks */; };
 		D1A1B1252B02E23A00D6F338 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1B1242B02E23A00D6F338 /* GameScene.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D14681472B88E2B000674E25 /* FireParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticles.sks; sourceTree = "<group>"; };
 		D1A1B11B2B02E23900D6F338 /* 045_to_047_Project11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 045_to_047_Project11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A1B11E2B02E23900D6F338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1A1B1202B02E23A00D6F338 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 				D1A1B1282B02E23A00D6F338 /* Main.storyboard */,
 				D1A1B12B2B02E23E00D6F338 /* Assets.xcassets */,
 				D1A1B12D2B02E23E00D6F338 /* LaunchScreen.storyboard */,
+				D14681472B88E2B000674E25 /* FireParticles.sks */,
 				D1A1B11C2B02E23900D6F338 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -120,6 +123,7 @@
 			files = (
 				D1A1B12A2B02E23A00D6F338 /* Main.storyboard in Resources */,
 				D1A1B1212B02E23A00D6F338 /* GameScene.sks in Resources */,
+				D14681482B88E2B000674E25 /* FireParticles.sks in Resources */,
 				D1A1B12C2B02E23E00D6F338 /* Assets.xcassets in Resources */,
 				D1A1B12F2B02E23E00D6F338 /* LaunchScreen.storyboard in Resources */,
 			);
