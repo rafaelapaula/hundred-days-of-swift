@@ -92,7 +92,7 @@ The next three projects we’ll be making are markedly different from the previo
 - ✅ [Day 45](https://github.com/rafaelapaula/hundred-days-of-swift/commit/4bb9bbd31a3c6968252d10e781e76a301ff20f3e) – Project 11, part one
 - ✅ [Day 46](https://github.com/rafaelapaula/hundred-days-of-swift/commit/8b24aaa72c68b740227780ad0be223c4458ba634) – Project 11, part two
 - ✅ [Day 47](https://github.com/rafaelapaula/hundred-days-of-swift/commit/8821e7a3bd260e570a69dbc01958122cf1138849) – Project 11, part three
-- Day 48 – Project 12, part one
+- ✅ [Day 48](https://github.com/rafaelapaula/hundred-days-of-swift/commit/04d51cd0844a455900891b4a6452744b8fb85cac) – Project 12, part one
 - Day 49 – Project 12, part two
  
 
