@@ -27,6 +27,7 @@
 		1302E7122AB894DC005904DA /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1302E7112AB894DC005904DA /* ViewController2.swift */; };
 		130A94862AB99FCF00824130 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130A94852AB99FCF00824130 /* DetailViewController.swift */; };
 		130A94892AB9A0B800824130 /* DetailViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130A94882AB9A0B800824130 /* DetailViewController2.swift */; };
+		D1AEF1802B9880D20094F43B /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AEF17F2B9880D20094F43B /* LocalStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		1302E7112AB894DC005904DA /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		130A94852AB99FCF00824130 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		130A94882AB9A0B800824130 /* DetailViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController2.swift; sourceTree = "<group>"; };
+		D1AEF17F2B9880D20094F43B /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				1302E6E62AB862DE005904DA /* AppDelegate.swift */,
 				1302E6E82AB862DE005904DA /* SceneDelegate.swift */,
 				1302E70F2AB86506005904DA /* MainViewController.swift */,
+				D1AEF17F2B9880D20094F43B /* LocalStorage.swift */,
 				1302E6EF2AB862E1005904DA /* Assets.xcassets */,
 				1302E6F12AB862E1005904DA /* LaunchScreen.storyboard */,
 				1302E6F42AB862E1005904DA /* Info.plist */,
@@ -219,6 +222,7 @@
 				1302E7122AB894DC005904DA /* ViewController2.swift in Sources */,
 				130A94862AB99FCF00824130 /* DetailViewController.swift in Sources */,
 				130A94892AB9A0B800824130 /* DetailViewController2.swift in Sources */,
+				D1AEF1802B9880D20094F43B /* LocalStorage.swift in Sources */,
 				1302E6E92AB862DE005904DA /* SceneDelegate.swift in Sources */,
 				1302E7102AB86506005904DA /* MainViewController.swift in Sources */,
 			);

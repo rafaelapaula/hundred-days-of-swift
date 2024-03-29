@@ -9,6 +9,7 @@ import UIKit
 
 class DetailViewController2: UIViewController {
   var imageInfo: (path: String, position: Int, total: Int)?
+  let localStorage = LocalStorage()
   
   lazy var imageView = {
     var imageView = UIImageView()
@@ -35,6 +36,7 @@ class DetailViewController2: UIViewController {
     
     guard let imageInfo = imageInfo else { return }
     title = "Picture \(imageInfo.position) of \(imageInfo.total)"
+    localStorage.viewed(image: imageInfo.path)
   }
 }
 

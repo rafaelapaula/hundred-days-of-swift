@@ -16,6 +16,7 @@ class PeopleViewController: UICollectionViewController, UICollectionViewDelegate
     super.viewDidLoad()
     configureView()
     configureNavigationBar()
+    load()
   }
   
   func configureNavigationBar() {
@@ -34,6 +35,26 @@ class PeopleViewController: UICollectionViewController, UICollectionViewDelegate
     picker.allowsEditing = true
     picker.delegate = self
     present(picker, animated: true)
+  }
+  
+  func save() {
+    let jsonEncoder = JSONEncoder()
+    if let savedData = try? jsonEncoder.encode(people) {
+      UserDefaults.standard.set(savedData, forKey: "people")
+    } else {
+      print("Error to save people")
+    }
+  }
+  
+  func load() {
+    if let savedData = UserDefaults.standard.data(forKey: "people") {
+      do {
+        let jsonDecoder = JSONDecoder()
+        people = try jsonDecoder.decode([Person].self, from: savedData)
+      } catch {
+        print("Unable to load people. Error: \(error)")
+      }
+    }
   }
 }
 
@@ -76,6 +97,7 @@ extension PeopleViewController {
     
     ac.addAction(UIAlertAction(title: "OK", style: .default) { [weak self] _ in
       self?.people.remove(at: indexPath.item)
+      self?.save()
       self?.collectionView.reloadData()
     })
     
@@ -92,7 +114,7 @@ extension PeopleViewController {
     ac.addAction(UIAlertAction(title: "OK", style: .default) { [weak self, weak ac] _ in
       guard let newName = ac?.textFields?[0].text else { return }
       person.name = newName
-      
+      self?.save()
       self?.collectionView.reloadData()
     })
     
@@ -113,10 +135,9 @@ extension PeopleViewController: UIImagePickerControllerDelegate {
     
     let person = Person(name: "Unknown", image: imageName)
     people.append(person)
+    save()
     collectionView.reloadData()
     
     dismiss(animated: true)
   }
-  
-
 }

@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UITableViewController {
   
   var pictures = [String]()
+  let localStorage = LocalStorage()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -18,7 +19,11 @@ class ViewController: UITableViewController {
     navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
     loadImages()
   }
-
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    tableView.reloadData()
+  }
 
   func loadImages() {
     let fm = FileManager.default
@@ -50,7 +55,8 @@ extension ViewController {
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
-    cell.textLabel?.text = pictures[indexPath.row]
+    let counter = localStorage.views(for: pictures[indexPath.row])
+    cell.textLabel?.text = "\(pictures[indexPath.row]) (\(counter))"
     return cell
   }
   

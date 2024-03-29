@@ -10,6 +10,7 @@ import UIKit
 class ViewController2: UITableViewController {
   
   var pictures = [String]()
+  let localStorage = LocalStorage()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -18,6 +19,10 @@ class ViewController2: UITableViewController {
     navigationController?.navigationBar.prefersLargeTitles = true
     
     performSelector(inBackground: #selector(loadPictures), with: nil)
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     tableView.reloadData()
   }
   
@@ -39,9 +44,11 @@ extension ViewController2 {
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "picture") ??  UITableViewCell(style: .default, reuseIdentifier: "picture")
+    let cell = tableView.dequeueReusableCell(withIdentifier: "picture") ??  UITableViewCell(style: .subtitle, reuseIdentifier: "picture")
+    let counter = localStorage.views(for: pictures[indexPath.row])
     cell.textLabel?.font = .systemFont(ofSize: 30.0)
-    cell.textLabel?.text = pictures[indexPath.row]
+    cell.textLabel?.text = "\(pictures[indexPath.row])"
+    cell.detailTextLabel?.text = "Viewed \(counter) time(s)"
     cell.accessoryType = .disclosureIndicator
     return cell
   }

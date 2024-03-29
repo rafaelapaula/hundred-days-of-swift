@@ -14,6 +14,8 @@ class ViewController2: UIViewController, ViewCodable {
   var correctAnswer = 0
   var counter = 0
   
+  lazy var highestScoreUseCase = HighestScoreUseCase()
+  
   lazy var button1: UIButton = {
     var button = UIButton(type: .custom)
     button.setImage(UIImage(named: "us"), for: .normal)
@@ -129,7 +131,13 @@ class ViewController2: UIViewController, ViewCodable {
   }
   
   func endOfGame() {
-    let ac = UIAlertController(title: "End of game!", message: "Your score is \(score)", preferredStyle: .alert)
+    var message = "Your score is \(score)"
+    
+    if highestScoreUseCase.shouldUpdate(score) {
+      message += ".\nYou have the highest score ever! Congrats! :)"
+    }
+    
+    let ac = UIAlertController(title: "End of game!", message: message, preferredStyle: .alert)
     ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: restart))
     present(ac, animated: true)
   }

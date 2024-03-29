@@ -45,8 +45,13 @@ class ViewModel: ViewModelProtocol {
   }
   
   func play() {
+    saveIfNeeded()
+    
     currentWord = words.randomElement() ?? ""
     inputedWords = []
+    
+    loadIfNeeded()
+    
     delegate?.didStartRound(with: currentWord)
   }
   
@@ -76,6 +81,26 @@ class ViewModel: ViewModelProtocol {
 }
 
 extension ViewModel {
+  
+  func saveIfNeeded() {
+    guard
+      !currentWord.isEmpty,
+      !inputedWords.isEmpty
+    else { return }
+    
+    UserDefaults.standard.setValue(inputedWords, forKey: "anagram.inputedValues.\(currentWord)")
+  }
+  
+  func loadIfNeeded() {
+    guard
+      !currentWord.isEmpty,
+      inputedWords.isEmpty
+    else { return }
+    
+    if let array = UserDefaults.standard.array(forKey: "anagram.inputedValues.\(currentWord)") as? [String] {
+      inputedWords = array
+    }
+  }
   
   func prepare(for errors: [AnagramErrors]) {
     var message = "Your word has the following problem(s):\n"

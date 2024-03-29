@@ -11,6 +11,7 @@ class DetailViewController: UIViewController {
   
   @IBOutlet weak var imageView: UIImageView!
   var imageInfo: (path: String, position: Int, total: Int)?
+  let localStorage = LocalStorage()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -20,5 +21,6 @@ class DetailViewController: UIViewController {
     guard let imageInfo = imageInfo else { return }
     title = "Picture \(imageInfo.position) of \(imageInfo.total)"
     imageView.image = UIImage(named: imageInfo.path)
+    localStorage.viewed(image: imageInfo.path)
   }
 }
